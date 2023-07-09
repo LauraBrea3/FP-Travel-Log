@@ -24,4 +24,18 @@ router.post("/", (req, res) => {
   );
 });
 
+router.put("/:id", (req, res) => {
+    db.Location.findByIdAndUpdate(req.params.id, req.body)
+      .then((location) => res.json({ msg: "Updated successfully" }))
+      .catch((err) =>
+        res.status(400).json({ error: "Unable to update the Database" })
+      );
+  });
+
+  router.delete("/:id", (req, res) => {
+    db.Location.findByIdAndRemove(req.params.id, req.body)
+      .then((location) => res.json({ mgs: "Location entry deleted successfully" }))
+      .catch((err) => res.status(404).json({ error: "Unable to delete Location" }));
+  });
+
 module.exports = router;
