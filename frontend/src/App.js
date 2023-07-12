@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import "./main.css";
 import { useState, useEffect } from "react";
+import Navbar from './components/navbar';
+import Home from './components/pages/home';
 import axios from "axios";
 
 export default function App() {
@@ -65,6 +67,3 @@ export default function App() {
     </div>
     <script src="./main.js"></script>
     
-
-  </div>;
-}
