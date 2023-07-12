@@ -1,4 +1,6 @@
 import React from "react";
+import './Footer.css';
+import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Contact({ contacts }) {
@@ -10,7 +12,6 @@ function Contact({ contacts }) {
     return (
         <div className="cont-img">
             <div className="cont-hover">
-
                 <div className="cont-container">
                     <div className="cont-wrap">
                         <a href="#">
@@ -34,5 +35,4 @@ function Contact({ contacts }) {
         </div>
     );
 }
-
 export default Contact;
