@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon index.js -e js,jsx",
+    "start": "npx nodemon index.js -e js,jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
