@@ -31,13 +31,13 @@ function Cards() {
             ></CardItem>
             <CardItem 
             src="img-5.jpg"
-            text="The Mysterious Stonehenge"
+            text="Stonehenge"
             label="England"
             path="/services/activity"
             ></CardItem>
             <CardItem 
             src="img-6.jpg"
-            text="The Pyramids!"
+            text="The Pyramids"
             label="Egypt"
             path="/services/activity"
             ></CardItem>
