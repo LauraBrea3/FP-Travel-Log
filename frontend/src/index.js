@@ -6,6 +6,10 @@ import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound"
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
 
 const AuthContext = createContext();
 
@@ -75,6 +79,10 @@ root.render(<App />);
 
 
 
-
-
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
 
