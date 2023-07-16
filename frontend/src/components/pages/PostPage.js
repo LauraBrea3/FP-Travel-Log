@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react'
+import NavigationBar from '../NavigationBar/NavigationBar.js';
 import PostCard from '../postCard/postCard.js';
 import './PostPage.css'
 import Comment from '../../components/comments/Comment'
@@ -34,33 +35,32 @@ function PostPage({match}) {
   }, [fetchComments, match.params.postId])
 
   return (
-    <div>
-      {post.title === undefined ? (
-        <h1>Loading....</h1>
-      ) : (
-        <PostCard
-          title={post.title}
-          authorId={post.authorId}
-          date={post.datePublished}
-          numLikes={post.numLikes}
-          description={post.description}
-        />
-      )}
-
-      <h4 className="mt-4 text-center">Comments</h4>
-      <div className="comment-box d-flex justify-content-center">
-        <br></br>
-        <ul className="list-unstyled m-4 ">
-          {loading ? (
-            <h1>loading</h1>
-          ) : comments.length === 0 ? (
-            <h1>No comment </h1>
+    <><NavigationBar /><div>
+          {post.title === undefined ? (
+              <h1>Loading....</h1>
           ) : (
-            comments.map(comment => <Comment key={comment.id} data={comment} />)
+              <PostCard
+                  title={post.title}
+                  authorId={post.authorId}
+                  date={post.datePublished}
+                  numLikes={post.numLikes}
+                  description={post.description} />
           )}
-        </ul>
-      </div>
-    </div>
+
+          <h4 className="mt-4 text-center">Comments</h4>
+          <div className="comment-box d-flex justify-content-center">
+              <br></br>
+              <ul className="list-unstyled m-4 ">
+                  {loading ? (
+                      <h1>loading</h1>
+                  ) : comments.length === 0 ? (
+                      <h1>No comment </h1>
+                  ) : (
+                      comments.map(comment => <Comment key={comment.id} data={comment} />)
+                  )}
+              </ul>
+          </div>
+      </div></>
   )
 }
 
