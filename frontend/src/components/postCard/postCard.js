@@ -1,14 +1,13 @@
 import React, {useState, useEffect, useCallback} from 'react'
 import './postPage.css'
 //import db from 'http://localhost:5000/location'
-const{MongoClient}=require('mongodb');
-const db = new MongoClient();
+import axios from 'axios'
 
 function PostCard(props) {
   const [authorName, setauthorName] = useState('')
 
   const fetchData = useCallback(() => {
-    const user = db.authors[props.authorId]
+    const user = axios.authors[props.authorId]
 
     setauthorName(user.firstName + ' ' + user.lastName)
   }, [props.authorId])

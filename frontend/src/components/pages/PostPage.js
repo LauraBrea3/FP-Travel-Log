@@ -2,9 +2,7 @@ import React, {useState, useEffect, useCallback} from 'react'
 import PostCard from '../postCard/postCard.js';
 import './PostPage.css'
 import Comment from '../../components/comments/Comment'
-const{MongoClient}=require('mongodb');
-const db = new MongoClient();
-
+import axios from 'axios';
 
 function PostPage({match}) {
   const [post, setPost] = useState({})
@@ -12,14 +10,14 @@ function PostPage({match}) {
   const [loading, setLoading] = useState(true)
 
   const fetchPost = useCallback(id => {
-    const post = db.posts[id]
+    const post = axios.posts[id]
     console.log({post})
     setPost({...post})
   }, [])
 
   const fetchComments = useCallback(id => {
     console.log('Before fetch comment ')
-    const data = db.comments.filter(
+    const data = axios.comments.filter(
       coment => parseInt(coment.postId) === parseInt(id),
     )
     console.log('After fetch comment ', data)

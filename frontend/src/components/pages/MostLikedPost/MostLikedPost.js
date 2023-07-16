@@ -1,8 +1,6 @@
 import React, {useState, useEffect, useMemo, useCallback} from 'react'
 import Post from '../../ShortPost/ShortPost'
-//import { mongodb as db } from '../../../../../backend/node_modules/mongodb'
-const{MongoClient}= require('mongodb');
-const db = new MongoClient();
+import axios from 'axios'
 
 function MostLikedPost() {
   let whichSort = useMemo(
@@ -69,7 +67,7 @@ function MostLikedPost() {
 
   // end of quick sort
   const fetchPost = useCallback(() => {
-    let data = db.posts
+    let data = axios.posts
 
     let result = quickSort(data, 0, data.length - 1)
 
