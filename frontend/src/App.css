@@ -158,3 +158,13 @@ h4 {
     margin-bottom: 1.5rem;
   }
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.App {
+  background-color: rgb(246, 246, 246);
+}
