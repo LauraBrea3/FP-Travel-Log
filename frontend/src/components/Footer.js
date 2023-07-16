@@ -10,12 +10,18 @@ function Footer() {
                     <div className="footer-link-div">
                         <h4></h4>
                         <a href="/home">
+                        <Link to='/home'></Link>
                             <p>Home</p>
                         </a>
-                        <a href="/about">
+                        <a href="/Posts">
+                            <p>PostPage</p>
+                            <Link to='/Posts'></Link>
+
                         </a>
-                        <a href="/register">
-                            <p>Register/Sign in</p>
+                        <a href="/map.html">
+                            <p>Map</p>
+                            <Link to='/map.html'></Link>
+
                         </a>
                     </div>
                     </div>
