@@ -3,7 +3,10 @@ import PostCard from '../../components/postCard/PostCard'
 import NavigationBar from '../navbar'
 import './PostPage.css'
 import Comment from '../../components/comments/Comment'
-import db //HAVING TROUBLE HERE PLZ HELP 
+//import db //HAVING TROUBLE HERE PLZ HELP 
+const{MongoClient}=required('mongodb');
+const db = new MongoClient();
+
 
 function PostPage({match}) {
   const [post, setPost] = useState({})

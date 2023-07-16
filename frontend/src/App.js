@@ -17,32 +17,19 @@ function App() {
   return (
     <Router>
       <Switch>
+      <Route path="/home" component={Home} />
         <Route path="/login" component={LoginForm} />
         <Route path="/signup" component={SignUpForm} />
-        <PrivateRoute path="/home" component={Home} />
         <Redirect to="/login" />
         <Route path="/posts" component={PostPage} />
+        <Route exact path="/" component={Body} />
+        <Route exact path="/MostLikedPost" component={MostLikedPost} />
+        <Route exact path="/MostCommentPost" component={MostLikedPost} />
+        <Route exact path="/:pageNo" component={Body} />
+        <Route exact path="/profile/:authorId" component={AuthorPage} />
+        <Route exact path="/Post/:postId" component={PostPage} />
       </Switch>
     </Router>
   );
 }
 export default App; 
-
-//function App() {
-  //return (
-  //  <div className="App">
-    //  <Router>
-      //  <NavigationBar />
-        //<Switch>
-         // <Route exact path="/" component={Body} />
-          //<Route exact path="/MostLikedPost" component={MostLikedPost} />
-     //     <Route exact path="/MostCommentPost" component={MostLikedPost} />
-     //     <Route exact path="/:pageNo" component={Body} />
-     //     <Route exact path="/profile/:authorId" component={AuthorPage} />
-     //     <Route exact path="/Post/:postId" component={PostPage} />
-     //   </Switch>
-     //   <Footer />
-     //   {/* <Body/> */}
-    //  </Router>
-  //  </div>
-//  )

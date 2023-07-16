@@ -1,7 +1,10 @@
 import React, {useState, useEffect, useMemo, useCallback} from 'react'
 import NavigationBar from '../../components/NavBar/NavigationBar'
 import Post from '../../components/ShortPost/ShortPost'
-import db //THIS TOO
+//import { mongodb as db } from '../../../../../backend/node_modules/mongodb'
+const{MongoClient}=required('mongodb');
+const db = new MongoClient();
+
 function MostLikedPost() {
   let whichSort = useMemo(
     () =>
@@ -101,7 +104,6 @@ function MostLikedPost() {
             ))
           )}
 
-                    <Post></Post> */}
         </ul>
       </div>
     </div>

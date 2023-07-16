@@ -2,10 +2,12 @@ import React, {useState, useEffect, useCallback} from 'react'
 import './profile.css'
 import Footer from '../../components/Footer/Footer'
 import NavigationBar from '../../NavigationBar/NavigationBar'
-import db from '//THIS TOO
 import AuthorCard from '../../components/AuthorCard/AuthorCard'
 import FilterHeader from '../../components/FilterHeader/FilterHeader'
 import UserPostList from '../../components/UserPostsList/UserPostList'
+const{MongoClient}=required('mongodb');
+const db = new MongoClient();
+
 
 function Profile({match}) {
   const [posts, setPosts] = useState([]) // for Seting Post

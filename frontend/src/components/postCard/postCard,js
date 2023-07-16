@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react'
 import './PostPage.css'
-import db from '//PLZ HELP HERE TOO
+import db from 'http://localhost:5000/location'
 
 function PostCard(props) {
   const [authorName, setauthorName] = useState('')
