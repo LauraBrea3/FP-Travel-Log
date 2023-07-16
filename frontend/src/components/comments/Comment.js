@@ -1,7 +1,7 @@
 import React, {useState, useEffect, memo, useCallback} from 'react'
 import {Link} from 'react-router-dom'
 //import db from ' THIS ONE TOO
-const{MongoClient}=required('mongodb');
+const{MongoClient}=require('mongodb');
 const db = new MongoClient();
 
 
