@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import LoginForm from './components/LoginForm';
+import SignUpForm from './components/SignUpForm';
+import PrivateRoute from './components/PrivateRoute';
 import "./App.css";
 import "./main.css";
-import { useState, useEffect } from "react";
-// import Navbar from './components/navbar';
-// import Home from './components/pages/home';
 import axios from "axios";
 import Home from "./components/pages/home";
+import { useState, useEffect } from "react";
 
 export default function App() {
   const [location, setLocation] = useState([]);
@@ -24,3 +26,17 @@ export default function App() {
         <Home />
 </div>
 }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/login" component={LoginForm} />
+        <Route path="/signup" component={SignUpForm} />
+        <PrivateRoute path="/home" component={Home} />
+        <Redirect to="/login" />
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
