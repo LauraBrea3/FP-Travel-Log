@@ -1,31 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import "./main.css";
+import { useState, useEffect } from "react";
+// import Navbar from './components/navbar';
+import Home from './components/pages/home';
+import axios from "axios";
 import LoginForm from './components/LoginForm';
 import SignUpForm from './components/SignUpForm';
 import PrivateRoute from './components/PrivateRoute';
-import "./App.css";
-import "./main.css";
-import axios from "axios";
-import Home from "./components/pages/home";
-import { useState, useEffect } from "react";
 
-export default function App() {
-  const [location, setLocation] = useState([]);
-
-  const fetchLocations = async () => {
-    const { data } = await axios.get("/location");
-    setLocation(data);
-  };
-
-  console.log(location);
-
-  useEffect(() => {
-    fetchLocations();
-  }, []);
-  return <div>
-        <Home />
-</div>
-}
 function App() {
   return (
     <Router>
@@ -38,5 +21,4 @@ function App() {
     </Router>
   );
 }
-
-export default App;
+export default App; 

@@ -4,12 +4,8 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
-import Home from "./components/Home";
+import Home from "./components/pages/home";
 import NotFound from "./components/NotFound"
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-
 
 const AuthContext = createContext();
 
@@ -79,10 +75,5 @@ root.render(<App />);
 
 
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+
 
