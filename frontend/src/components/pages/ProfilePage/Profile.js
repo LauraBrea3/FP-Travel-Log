@@ -5,8 +5,7 @@ import NavigationBar from '../../NavigationBar/NavigationBar'
 import AuthorCard from '../../components/AuthorCard/AuthorCard'
 import FilterHeader from '../../components/FilterHeader/FilterHeader'
 import UserPostList from '../../components/UserPostsList/UserPostList'
-const{MongoClient}=required('mongodb');
-const db = new MongoClient();
+import axios from 'axios'
 
 
 function Profile({match}) {
@@ -16,14 +15,14 @@ function Profile({match}) {
 
 
   const fetchPost = useCallback(async id => {
-    let posts = db.posts.filter(post => post.authorId === parseInt(id))
+    let posts = axios.posts.filter(post => post.authorId === parseInt(id))
 
     setPosts(posts)
   }, [])
 
   
   const fetchUser = useCallback(async id => {
-    const user = db.authors[id]
+    const user = axios.authors[id]
     setAuthor(user)
   }, [])
 

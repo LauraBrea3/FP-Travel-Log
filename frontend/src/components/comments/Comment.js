@@ -1,15 +1,14 @@
 import React, {useState, useEffect, memo, useCallback} from 'react'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 //import db from ' THIS ONE TOO
-const{MongoClient}=require('mongodb');
-const db = new MongoClient();
 
 
 function Comment(props) {
   const [userName, setUserName] = useState('')
 
   const fetchData = useCallback(async () => {
-    const user = db.authors[props.data.authorId]
+    const user = axios.authors[props.data.authorId]
 
     setUserName(user.firstName + ' ' + user.lastName)
   }, [props.data.authorId])
