@@ -51,14 +51,14 @@ export default function App() {
             <Route path="/home" element={<Home/>} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/signup" element={<SignUpForm />} />
-            <Route
+            {/* <Route
               path="/"
               element={
                 <ProtectedRoute>
                   <Home />
                 </ProtectedRoute>
               }
-            />
+            /> */}
           <Route path="/posts" component={PostPage} />
         <Route exact path="/MostLikedPost" component={MostLikedPost} />
         <Route exact path="/MostCommentPost" component={MostLikedPost} />
