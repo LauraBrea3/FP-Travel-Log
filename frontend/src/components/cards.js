@@ -14,13 +14,13 @@ function Cards() {
             src="img-2.jpg"
             text="The Eiffel Tower"
             label="France"
-            path="/LogInForm"
+            path="/LogIn"
             ></CardItem>
             <CardItem 
             src="img-3.jpg"
             text="The Colosseum"
             label="Italy"
-            path="/LogInForm"
+            path="/LogIn"
             ></CardItem>
           </ul>
           <ul className='cards__items'>
@@ -28,19 +28,19 @@ function Cards() {
             src="img-4.jpg"
             text="The Grand Canyon"
             label="Arizona"
-            path="/LogInForm"
+            path="/LogIn"
             ></CardItem>
             <CardItem 
             src="img-5.jpg"
             text="Stonehenge"
             label="England"
-            path="/LogInForm"
+            path="/LogIn"
             ></CardItem>
             <CardItem 
             src="img-6.jpg"
             text="The Pyramids"
             label="Egypt"
-            path="/LogInForm"
+            path="/LogIn"
             ></CardItem>
           </ul>
         </div>
