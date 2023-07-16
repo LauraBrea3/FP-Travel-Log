@@ -1,6 +1,8 @@
 import React, {useState, useEffect, useCallback} from 'react'
-import './PostPage.css'
-import db from 'http://localhost:5000/location'
+import './postPage.css'
+//import db from 'http://localhost:5000/location'
+const{MongoClient}=require('mongodb');
+const db = new MongoClient();
 
 function PostCard(props) {
   const [authorName, setauthorName] = useState('')

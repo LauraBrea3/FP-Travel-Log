@@ -6,6 +6,8 @@ import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
 import Home from "./components/pages/home";
 import NotFound from "./components/NotFound"
+import PostPage from "./components/pages/PostPage";
+import MostLikedPost from "./components/pages/MostLikedPost/MostLikedPost";
 
 const AuthContext = createContext();
 
@@ -46,6 +48,7 @@ export default function App() {
       <div>
         <Router>
           <Routes>
+            <Route path="/home" element={<Home/>} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/signup" element={<SignUpForm />} />
             <Route
@@ -56,6 +59,10 @@ export default function App() {
                 </ProtectedRoute>
               }
             />
+          <Route path="/posts" component={PostPage} />
+        <Route exact path="/MostLikedPost" component={MostLikedPost} />
+        <Route exact path="/MostCommentPost" component={MostLikedPost} />
+        <Route exact path="/Post/:postId" component={PostPage} />
             <Route path="*" element={<Home />} /> {/* Handle 404 */}
           </Routes>
         </Router>

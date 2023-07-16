@@ -1,10 +1,8 @@
 import React, {useState, useEffect, useCallback} from 'react'
-import PostCard from '../../components/postCard/PostCard'
-import NavigationBar from '../navbar'
+import PostCard from '../postCard/postCard.js';
 import './PostPage.css'
 import Comment from '../../components/comments/Comment'
-//import db //HAVING TROUBLE HERE PLZ HELP 
-const{MongoClient}=required('mongodb');
+const{MongoClient}=require('mongodb');
 const db = new MongoClient();
 
 
