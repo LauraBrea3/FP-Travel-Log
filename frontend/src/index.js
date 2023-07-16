@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
-import Home from "./components/Home";
+import Home from "./components/pages/home";
 import NotFound from "./components/NotFound"
 
 const AuthContext = createContext();
@@ -72,8 +72,6 @@ const ProtectedRoute = ({ children }) => {
 
 const root = createRoot(document.getElementById("root"));
 root.render(<App />);
-
-
 
 
 

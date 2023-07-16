@@ -1,4 +1,4 @@
-  .form-container {
+.form-container {
     width: 250px;
     max-width: 300px;
     margin: 1 rem;
@@ -15,7 +15,7 @@
     margin-bottom: 20px;
   }
 
-  
+
   .form-container input[type="text"],
   .form-container input[type="password"] {
     display: block;

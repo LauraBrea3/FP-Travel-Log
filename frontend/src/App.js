@@ -1,8 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import "./main.css";
+import { useState, useEffect } from "react";
+// import Navbar from './components/navbar';
+import Home from './components/pages/home';
+import axios from "axios";
 import LoginForm from './components/LoginForm';
 import SignUpForm from './components/SignUpForm';
-import Home from './components/Home';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -17,5 +21,4 @@ function App() {
     </Router>
   );
 }
-
-export default App;
+export default App; 
