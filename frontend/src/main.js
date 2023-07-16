@@ -3,12 +3,10 @@ function setFormMessage(formElement, type, message) {
     messageElement.textContent = message;
     messageElement.className = `form__message form__message--${type}`;
   }
-
   function setInputError(inputElement, message) {
     inputElement.classList.add("form__input--error");
     inputElement.nextElementSibling.textContent = message;
   }
-
   function clearInputError(inputElement) {
     inputElement.classList.remove("form__input--error");
     inputElement.nextElementSibling.textContent = "";
@@ -23,7 +21,6 @@ function setFormMessage(formElement, type, message) {
       loginForm.classList.add("form--hidden");
       createAccountForm.classList.remove("form--hidden");
     });
-
     document.querySelector("#linkLogin").addEventListener("click", (e) => {
       e.preventDefault();
       loginForm.classList.remove("form--hidden");
@@ -40,7 +37,6 @@ function setFormMessage(formElement, type, message) {
         username: username,
         password: password
       };
-
       fetch("axios.get('/location') ", {
         method: "POST",
         headers: {
@@ -61,14 +57,12 @@ function setFormMessage(formElement, type, message) {
           setFormMessage(loginForm, "error", error.message);
         });
     });
-
     document.querySelectorAll(".form__input").forEach((inputElement) => {
       inputElement.addEventListener("blur", (e) => {
         if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
           setInputError(inputElement, "Username must be at least 10 characters in length");
         }
       });
-
       inputElement.addEventListener("input", () => {
         clearInputError(inputElement);
       });

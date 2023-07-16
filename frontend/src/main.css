@@ -71,7 +71,6 @@ body {
     box-sizing: border-box;
     border-radius:var (--border-radius);
     outline: none;
-
 }
 
 .form__input--error {
