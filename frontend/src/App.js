@@ -4,6 +4,9 @@ import LoginForm from './components/LoginForm';
 import SignUpForm from './components/SignUpForm';
 import Home from './components/Home';
 import PrivateRoute from './components/PrivateRoute';
+import Cards from './Cards';
+import PostPage from './PostPage';
+
 
 function App() {
   return (
@@ -12,6 +15,8 @@ function App() {
         <Route path="/login" component={LoginForm} />
         <Route path="/signup" component={SignUpForm} />
         <PrivateRoute path="/home" component={Home} />
+        <Route exact path="/" component={Cards} />
+        <Route path="/post/:id" component={PostPage} />
         <Redirect to="/login" />
       </Switch>
     </Router>
