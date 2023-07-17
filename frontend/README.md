@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+Travel Log
+A travel logging app built with React, Node, MongoDB and JWT.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+User authentication with JWT
+Search and filter logs
+User profiles
+React front-end
 
-## Available Scripts
+Install
+npm i -y
 
-In the project directory, you can run:
 
-### `npm start`
+Back End
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Front End
+npm start
 
-### `npm test`
+Servers
+-Front End runs on localhost:3000
+-Back End runs on localhost:5000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Database
+The app uses MongoDB with Mongoose for data modeling. 
+It has the following collections:
 
-### `npm run build`
+Users
+Logs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Deployment
+The app is set up for deployment on 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Built With
+Node - Runtime environment
+Express - Web framework
+MongoDB - Database
+Mongoose - ODM
+React - Front-end framework
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Authors
+-Wing
+-Laura
+-Andrew
+-Kissny
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Image Credits
+img-1.jpg by <a href="https://unsplash.com/@wistomsin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3ETom Barrett</a> on <a href="https://unsplash.com/images/travel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EUnsplash</a>
+ img-6 by <a href="https://unsplash.com/@nadah?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3ENada Habashy</a> on <a href="https://unsplash.com/photos/zruwsJh-lOI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EUnsplash</a>
+img-5 by <a href="https://unsplash.com/@kmitchhodge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EK. Mitch Hodge</a> on <a href="https://unsplash.com/photos/oQ9pECond48?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EUnsplash</a>
+  img-4 by <a href="https://unsplash.com/@quinton_nietfeld?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EQuinn Nietfeld</a> on <a href="https://unsplash.com/photos/JtLk5eVLuHE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EUnsplash</a>
+  img-3 by <a href="https://unsplash.com/de/@davidkhlr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EDavid Köhler</a> on <a href="https://unsplash.com/photos/VFRTXGw1VjU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EUnsplash</a>
+  img-2 by <a href="https://unsplash.com/@anthonydelanoix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EAnthony DELANOIX</a> on <a href="https://unsplash.com/photos/Q0-fOL2nqZc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3EUnsplash</a>
